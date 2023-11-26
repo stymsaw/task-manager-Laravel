@@ -1,19 +1,18 @@
 <h1>Hello I'am a blade template.</h1>
 
+@section('title', 'The list of tasks')
 
-<div>
-    {{-- @if (count($tasks)) --}}
-    @forelse ($tasks as $task)
-        <div>
-            <a href="{{ route('tasks.show', ['id' => $task->id]) }}">{{ $task->title }}</a>
-        </div>
+@section('content')
 
-    @empty
-        <div>there are no tasks.</div>
-    @endforelse
+    <div>
+        @forelse ($tasks as $task)
+            <div>
+                <a href="{{ route('tasks.show', ['id' => $task->id]) }}">{{ $task->title }}</a>
+            </div>
 
-
-    {{-- @endif --}}
-
-
-</div>
+        @empty
+            <div>there are no tasks.</div>
+        @endforelse
+    </div>
+    
+@endsection
