@@ -3,9 +3,10 @@
 @section('title', 'Add Task')
 
 @section('content')
+    
     <form method="POST" action="{{ route('tasks.store') }}">
         @csrf
-        
+
         <div>
             <label for="title">Title</label>
             <input type="text" name="title" id="title" />
