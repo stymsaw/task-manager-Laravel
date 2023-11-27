@@ -1,4 +1,4 @@
-<h1>Hello I'am a blade template.</h1>
+@extends('layouts.app')
 
 @section('title', 'The list of tasks')
 
