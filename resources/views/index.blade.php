@@ -4,6 +4,10 @@
 
 @section('content')
 
+<div>
+    <a href="{{route('tasks.create')}}">Create Task</a>
+</div>
+
 
     @forelse ($tasks as $task)
         <div>
@@ -13,7 +17,7 @@
     @empty
         <div>there are no tasks.</div>
     @endforelse
-    
+
     @if ($tasks->count())
     <nav>
       {{ $tasks->links() }}
